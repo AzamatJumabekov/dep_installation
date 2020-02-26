@@ -64,7 +64,7 @@ install_rvm() {
 install_postgres(){
   sudo dnf install https://download.postgresql.org/pub/repos/yum/reporpms/F-31-x86_64/pgdg-fedora-repo-latest.noarch.rpm -y
   sudo apt update >> /dev/null 2>&1
-  install postgresql11-server postgresql11
+  install postgresql11-server postgresql11 libpq-devel
   rpm -qi postgresql11-server
   sudo /usr/pgsql-11/bin/postgresql-11-setup initdb
   sudo systemctl start postgresql-11
