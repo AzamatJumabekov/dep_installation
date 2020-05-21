@@ -11,3 +11,6 @@ print_info() {
   echo -e "\e[34m$1 \e[0m"
 }
 
+print_fatal(){
+  echo -e "\e[31m \e[5m$1 \e[0m"
+}
